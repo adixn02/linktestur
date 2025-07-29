@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="styles/css/main.css">
     <script>
         tailwind.config = {
@@ -29,6 +32,7 @@
             }
         }
     </script>
+  <link rel="stylesheet" href="./styles/css/index.css">
 </head>
 <body class="font-inter bg-white">
    
@@ -48,7 +52,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-gray-900 font-medium hover:text-primary transition-colors">Home</a>
                     <a href="about.html" class="text-gray-600 hover:text-primary transition-colors">About Us</a>
-                    <a href="#properties" class="text-gray-600 hover:text-primary transition-colors">Properties</a>
+                    <a href="./contact.html" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
                     <a href="#agents" class="text-gray-600 hover:text-primary transition-colors">Agents</a>
                 </div>
                 
@@ -81,8 +85,8 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+     <!-- Hero Section -->
+    <section class="relative hero-section flex items-center justify-center overflow-hidden" style="height: 70vh;">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80" 
@@ -93,15 +97,22 @@
         
         <!-- Hero Content -->
         <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
-            <h1 class="text-5xl md:text-7xl font-light text-white mb-12 animate-fade-in">
-                Find your place
-            </h1>
-             <p class="text-lg text-gray-600 max-w-md">
-                        Want to find a home? We are ready to help you find one that suits your lifestyle and needs
-                    </p>
+
+            <div class=" mb-8">
+
+                <h1 class="text-5xl md:text-7xl font-light text-white mb-4 animate-fade-in">
+                    Find your perfect <p class="typewriter"></p>
+                </h1>
+              
+
+            </div>
+
+            <p class="text-lg text-gray-200 max-w-md mx-auto">
+                Discover the ideal property that matches your lifestyle and needs
+            </p>
             
-            <!-- Search Tabs and Bar -->
-            <div class="bg-white rounded-lg shadow-2xl p-6 animate-slide-up">
+            <!-- Search Section -->
+            <div class="bg-white rounded-lg shadow-2xl p-6 mt-12 animate-slide-up">
                 <!-- Search Tabs -->
                 <div class="flex mb-6 border-b border-gray-200">
                     <button class="search-tab active px-6 py-3 font-medium text-primary border-b-2 border-primary" data-tab="buy">
@@ -116,36 +127,14 @@
                 </div>
                 
                 <!-- Search Form -->
-                <!-- <form class="flex flex-col md:flex-row gap-4">
-                    <div class="flex-1 relative">
-                        <input type="text" 
-                               placeholder="City, Neighborhood, Address, School, ZIP, Agent, MLS #"
-                               class="w-full px-4 py-4 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                        <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                    </div>
-                    <button type="submit" class="bg-primary text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button>
-                </form> -->
-
-                  <!-- Search Section -->
-    <section class="bg-white py-8 -mt-8 relative z-10">
-        <div class="container mx-auto px-4">
-            <div class="bg-white rounded-2xl shadow-xl p-6 lg:p-8 border border-gray-100">
-                <h3 class="text-xl font-semibold text-gray-900 mb-6">Search for available properties</h3>
-                
                 <div class="grid md:grid-cols-4 gap-4">
                     <div class="relative">
                         <select class="w-full p-4 border border-gray-300 rounded-lg bg-gray-50 appearance-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                             <option>Location</option>
-                            <option>Lagos</option>
-                            <option>Abuja</option>
-                            <option>Port Harcourt</option>
+                            <option>Delhi</option>
+                            <option>Gurgaon</option>
+                            <option>Noida</option>
+                            <option>Faridabad</option>
                         </select>
                         <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -160,6 +149,7 @@
                             <option>Apartment</option>
                             <option>House</option>
                             <option>Condo</option>
+                            <option>Plot</option>
                         </select>
                         <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,9 +161,10 @@
                     <div class="relative">
                         <select class="w-full p-4 border border-gray-300 rounded-lg bg-gray-50 appearance-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                             <option>Budget</option>
-                            <option>Under ₦50M</option>
-                            <option>₦50M - ₦100M</option>
-                            <option>Above ₦100M</option>
+                            <option>Under ₹50L</option>
+                            <option>₹50L - ₹1Cr</option>
+                            <option>₹1Cr - ₹2Cr</option>
+                            <option>Above ₹2Cr</option>
                         </select>
                         <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -182,7 +173,7 @@
                         </div>
                     </div>
                     
-                    <button class="bg-black text-white px-6 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium">
+                    <button class="bg-primary text-white px-6 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                         Search Now
                     </button>
                 </div>
@@ -190,12 +181,105 @@
         </div>
     </section>
 
+ 
+    <!-- Exclusive Partnerships -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-light text-secondary mb-4">Urbanesta Realtors Exclusive</h2>
+                <p class="text-xl text-gray-600">Partnered with India's leading builders</p>
             </div>
             
+            <!-- Builder Carousel -->
+            <div class="swiper builderSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Builder 1 -->
+                    <div class="swiper-slide">
+                        <div class="builder-card">
+                            <div class="text-center">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto mb-3">
+                                    <img src="data:image/png;base64,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" alt="">
+                                </div>
+                                <h3 class="font-bold text-gray-800">DLF</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Builder 2 -->
+                    <div class="swiper-slide">
+                        <div class="builder-card">
+                            <div class="text-center">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto mb-3"></div>
+                                <h3 class="font-bold text-gray-800">Godrej Properties</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Builder 3 -->
+                    <div class="swiper-slide">
+                        <div class="builder-card">
+                            <div class="text-center">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto mb-3"></div>
+                                <h3 class="font-bold text-gray-800">M3M India</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Builder 4 -->
+                    <div class="swiper-slide">
+                        <div class="builder-card">
+                            <div class="text-center">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto mb-3"></div>
+                                <h3 class="font-bold text-gray-800">ATS Infrastructure</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Builder 5 -->
+                    <div class="swiper-slide">
+                        <div class="builder-card">
+                            <div class="text-center">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto mb-3"></div>
+                                <h3 class="font-bold text-gray-800">Tata Housing</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Builder 6 -->
+                    <div class="swiper-slide">
+                        <div class="builder-card">
+                            <div class="text-center">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto mb-3"></div>
+                                <h3 class="font-bold text-gray-800">Parsvnath Developers</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Builder 7 -->
+                    <div class="swiper-slide">
+                        <div class="builder-card">
+                            <div class="text-center">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto mb-3"></div>
+                                <h3 class="font-bold text-gray-800">Raheja Developers</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Builder 8 -->
+                    <div class="swiper-slide">
+                        <div class="builder-card">
+                            <div class="text-center">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mx-auto mb-3"></div>
+                                <h3 class="font-bold text-gray-800">Emaar India</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
     </section>
-
- 
 
     <!-- Featured Properties -->
     <section class="py-16 bg-white">
@@ -399,7 +483,200 @@
                         </div>
                     </div>
                 </div>
+
+<!-- Additional properties (5-8) -->
+                <!-- Property Card 5 -->
+                <div class="property-card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             alt="Modern Villa" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <button class="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                            <svg class="w-5 h-5 text-gray-600 hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="pt-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-secondary">₹4.20 Cr</h3>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h2M4 16v2a2 2 0 002 2h2M16 4h2a2 2 0 012 2v2M16 20h2a2 2 0 002-2v-2"></path>
+                                </svg>
+                                5,000 sq ft
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-3">Luxury Villa with Pool</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            DLF Phase 5, Gurgaon
+                        </div>
+                        <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                                </svg>
+                                6 bed
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+                                </svg>
+                                5 bath
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property Card 6 -->
+                <div class="property-card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             alt="Penthouse" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <button class="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                            <svg class="w-5 h-5 text-gray-600 hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            New Listing
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-secondary">₹3.10 Cr</h3>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h2M4 16v2a2 2 0 002 2h2M16 4h2a2 2 0 012 2v2M16 20h2a2 2 0 002-2v-2"></path>
+                                </svg>
+                                3,600 sq ft
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-3">Luxury Penthouse</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Cyber City, Gurgaon
+                        </div>
+                        <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                                </svg>
+                                3 bed
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+                                </svg>
+                                3 bath
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property Card 7 -->
+                <div class="property-card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             alt="Modern Farmhouse" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <button class="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                            <svg class="w-5 h-5 text-gray-600 hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="pt-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-secondary">₹5.50 Cr</h3>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h2M4 16v2a2 2 0 002 2h2M16 4h2a2 2 0 012 2v2M16 20h2a2 2 0 002-2v-2"></path>
+                                </svg>
+                                8,000 sq ft
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-3">Modern Farmhouse</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Chhatarpur, Delhi
+                        </div>
+                        <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                                </svg>
+                                5 bed
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+                                </svg>
+                                4 bath
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property Card 8 -->
+                <div class="property-card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             alt="Plot for Sale" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <button class="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                            <svg class="w-5 h-5 text-gray-600 hover:text-red-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Prime Location
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-semibold text-secondary">₹1.85 Cr</h3>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h2M4 16v2a2 2 0 002 2h2M16 4h2a2 2 0 012 2v2M16 20h2a2 2 0 002-2v-2"></path>
+                                </svg>
+                                500 sq yd
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-3">Residential Plot</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Sector 150, Noida
+                        </div>
+                        <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                                </svg>
+                                Plot
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            </div>
+
+            
             
             <div class="text-center mt-12">
                 <button class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
@@ -409,6 +686,65 @@
         </div>
     </section>
 
+    <!-- Neighborhood Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-light text-secondary mb-4">Find the Neighborhood For You</h2>
+                <p class="text-xl text-gray-600">The neighborhoods best suited to your lifestyle in Delhi NCR</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Neighborhood 1 -->
+                <div class="neighborhood-card" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <div class="neighborhood-overlay">
+                        <h3 class="text-2xl font-bold text-white">Gurgaon</h3>
+                        <p class="text-white">Modern business hub with luxury living</p>
+                    </div>
+                </div>
+                
+                <!-- Neighborhood 2 -->
+                <div class="neighborhood-card" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <div class="neighborhood-overlay">
+                        <h3 class="text-2xl font-bold text-white">South Delhi</h3>
+                        <p class="text-white">Affluent residential areas with green spaces</p>
+                    </div>
+                </div>
+                
+                <!-- Neighborhood 3 -->
+                <div class="neighborhood-card" style="background-image: url('https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <div class="neighborhood-overlay">
+                        <h3 class="text-2xl font-bold text-white">Noida</h3>
+                        <p class="text-white">Planned city with modern infrastructure</p>
+                    </div>
+                </div>
+                
+                <!-- Neighborhood 4 -->
+                <div class="neighborhood-card" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <div class="neighborhood-overlay">
+                        <h3 class="text-2xl font-bold text-white">West Delhi</h3>
+                        <p class="text-white">Vibrant communities with cultural heritage</p>
+                    </div>
+                </div>
+                
+                <!-- Neighborhood 5 -->
+                <div class="neighborhood-card" style="background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <div class="neighborhood-overlay">
+                        <h3 class="text-2xl font-bold text-white">Dwarka</h3>
+                        <p class="text-white">Well-planned subcity with ample amenities</p>
+                    </div>
+                </div>
+                
+                <!-- Neighborhood 6 -->
+                <div class="neighborhood-card" style="background-image: url('https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <div class="neighborhood-overlay">
+                        <h3 class="text-2xl font-bold text-white">Faridabad</h3>
+                        <p class="text-white">Industrial hub with affordable housing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Map Section -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -503,7 +839,7 @@
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
                     <div class="mb-4">
-                        <h3 class="text-2xl font-bold text-secondary tracking-tight">COMPASS</h3>
+                        <h3 class="text-2xl font-bold text-secondary tracking-tight">Urbanesta Realtors</h3>
                     </div>
                     <p class="text-gray-600 mb-6 max-w-md">
                         The modern real estate platform that makes buying and selling homes easier, faster, and more enjoyable.
@@ -558,7 +894,7 @@
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            hello@compass.com
+                            hello@urbanestarealtors.com
                         </li>
                         <li class="flex items-start">
                             <svg class="w-4 h-4 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -572,7 +908,7 @@
             </div>
             
             <div class="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
-                <p>&copy; 2024 Compass. All rights reserved.</p>
+                <p>&copy; 2025 Urbanesta Realtors. All rights reserved.</p>
             </div>
         </div>
     </footer>
