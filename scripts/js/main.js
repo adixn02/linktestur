@@ -305,20 +305,20 @@
             });
             
             // Typewriter effect
-            const typewriterElement = document.querySelector('.typewriter p');
-            const propertyTypes = ['Home', 'Office', 'Farmhouse', 'Plot', 'Apartment', 'Villa'];
-            let currentIndex = 0;
+            // const typewriterElement = document.querySelector('.typewriter p');
+            // const propertyTypes = ['Home', 'Office', 'Farmhouse', 'Plot', 'Apartment', 'Villa'];
+            // let currentIndex = 0;
             
-            function updateTypewriter() {
-                typewriterElement.textContent = `Find your perfect ${propertyTypes[currentIndex]}`;
-                currentIndex = (currentIndex + 1) % propertyTypes.length;
-            }
+            // function updateTypewriter() {
+            //     typewriterElement.textContent = `Find your perfect ${propertyTypes[currentIndex]}`;
+            //     currentIndex = (currentIndex + 1) % propertyTypes.length;
+            // }
             
-            // Initial update
-            updateTypewriter();
+            // // Initial update
+            // updateTypewriter();
             
-            // Update every 3 seconds
-            setInterval(updateTypewriter, 3000);
+            // // Update every 3 seconds
+            // setInterval(updateTypewriter, 3000);
             
             // Initialize Swiper for builder carousel
             const builderSwiper = new Swiper('.builderSwiper', {
@@ -344,3 +344,39 @@
                 },
             });
         });
+
+        document.addEventListener("DOMContentLoaded", () => {
+  const typewriter = document.querySelector(".typewriter");
+  const words = ["home", "apartment", "villa", "space"];
+  let index = 0;
+  let charIndex = 0;
+  let currentWord = "";
+  let isDeleting = false;
+
+  function type() {
+    if (!typewriter) return;
+    currentWord = words[index];
+
+    if (isDeleting) {
+      charIndex--;
+    } else {
+      charIndex++;
+    }
+
+    typewriter.textContent = currentWord.substring(0, charIndex);
+
+    if (!isDeleting && charIndex === currentWord.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      index = (index + 1) % words.length;
+      setTimeout(type, 300);
+    } else {
+      setTimeout(type, isDeleting ? 50 : 100);
+    }
+  }
+
+  type();
+});
+
