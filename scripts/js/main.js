@@ -321,28 +321,44 @@
             // setInterval(updateTypewriter, 3000);
             
             // Initialize Swiper for builder carousel
-            const builderSwiper = new Swiper('.builderSwiper', {
-                slidesPerView: 2,
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 30,
-                    },
-                },
-            });
+            // const builderSwiper = new Swiper('.builderSwiper', {
+            //     slidesPerView: 2,
+            //     spaceBetween: 20,
+            //     navigation: {
+            //         nextEl: '.swiper-button-next',
+            //         prevEl: '.swiper-button-prev',
+            //     },
+            //     breakpoints: {
+            //         640: {
+            //             slidesPerView: 3,
+            //             spaceBetween: 20,
+            //         },
+            //         768: {
+            //             slidesPerView: 4,
+            //             spaceBetween: 30,
+            //         },
+            //         1024: {
+            //             slidesPerView: 5,
+            //             spaceBetween: 30,
+            //         },
+            //     },
+            // });
+            const builderSwiper = new Swiper(".builderSwiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: { slidesPerView: 3 },
+    768: { slidesPerView: 4 },
+    1024: { slidesPerView: 5 },
+  },
+});
+
+
         });
 
         document.addEventListener("DOMContentLoaded", () => {
